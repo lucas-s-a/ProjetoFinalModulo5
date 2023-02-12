@@ -8,15 +8,10 @@ const app = express()
 const conn = require('./db/conn')
 
 
-const Pdds = require('./models/Pdds')
-const Prods = require('./models/Prods')
-const Usuarios = require('./models/Usuarios')
+const router1 = require('./routes/routermain')
+const router2 = require('./routes/routerautenticator')
 
-
-const router1 = require('./routes/router')
-const router2 = require('./routes/rtautentication')
-
-const CgTd = require('./controllers/Controllj')
+const CgTd = require('./controllers/ControlPedUs')
 
 
 app.engine('handlebars', exphbs.engine())
@@ -46,7 +41,7 @@ app.use(express.static('public'))
 
 
 app.use((req, res, next) => {
-    if (req.session.clienteid) {
+    if (req.session.clientesid) {
         res.locals.session = req.session
     }
     next()
@@ -57,7 +52,7 @@ app.use((req, res, next) => {
 app.use('/pages',router1)
 app.use('/',router2)
 
-app.get('/', CgTd.home)
+app.get('/', CgTd.Home)
 
 
 conn.sync()

@@ -1,0 +1,16 @@
+<div class="tought-form-container">
+    <a href="/pages/dashb">Voltar</a>
+    <h1>Altere algum dados</h1>
+    <form action="/pages/atualizarcad" method="POST">
+        <input type="hidden" name="id" value={{usdados.id}}>
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" placeholder="Digite o seu nome" value="{{usdados.nome}}">
+        </div>
+        <div>
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" placeholder="Digite o seu nome" value="{{usdados.sobrenome}}">
+        </div>
+        <input type="submit" value="Editar Pensamento">
+    </form>
+</div>

@@ -1,0 +1,8 @@
+<h1>Apagar Sua Conta</h1>
+<img src="" alt="Pessoa triste se despidindo">
+<h1>Senhor {{usatual.nome}} {{usatual.sobrenome}}</h1>
+<p>Voce está prestes a perder todas as vantagens que temos a oferecer</p>
+<form action="/pages/apagarcount" method="POST">
+    <input type="hidden" name="id" value="{{this.id}}">
+    <input type="submit" value="Apagar conta" class="btn">
+</form>

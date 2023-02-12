@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize')
 
-const sequelize = new Sequelize('db_ljbrax', 'root', '', {
+const sequelize = new Sequelize('db_ljbrex', 'root', '', {
     host: 'localhost',
     dialect: 'mysql',
 })

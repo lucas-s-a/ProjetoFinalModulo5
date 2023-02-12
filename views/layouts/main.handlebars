@@ -14,9 +14,9 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="#">Sobre</a></li> 
-            {{#if session.usuarioid}}
+            {{#if session.clientesid}}
             <li><a href="/pages/dashb">Produtos</a></li>
-            <li><a href="#">Sair</a></li>
+            <li><a href="/sair">Sair</a></li>
             {{else}}
             <li><a href="/cadastro">Cadastro</a></li>
             <li><a href="/login">Entrar</a></li>
