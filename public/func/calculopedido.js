@@ -138,7 +138,21 @@ function Verpedido(){
     document.querySelector("#valortotal").innerHTML = `<div><input name="totalcompra" type="hidden" value="${total}"><br><p>${total}</p></div>`
 }
 function postarhistorico(){
-    console.log(ddpdds[0])
+    console.log(ddpdds)
+    console.log(ddpdds[0].children.length)
+    console.log(ddpdds[0].children[10].value)
+    const preparacard = []
+    let x = 0
+    while(x < ddpdds[0].children.length){
+        let z = ddpdds[0].children[x].innerText
+        if(z == ""){
+            break
+        }
+        let p = z.split("/")
+        preparacard.push(p)
+        x= x+1
+    }
+    console.log(preparacard)
 }
 prephist.addEventListener('click',postarhistorico)
 prepped.addEventListener('click',Verpedido)

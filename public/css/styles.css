@@ -11,3 +11,6 @@ html{
     display: flex;
     flex-direction: row;
 }
+.cd{
+    display: none;
+}
