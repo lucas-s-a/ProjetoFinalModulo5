@@ -1,0 +1,13 @@
+html{
+    margin:0;
+    padding:0;
+}
+.caixageral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.caixa2{
+    display: flex;
+    flex-direction: row;
+}
