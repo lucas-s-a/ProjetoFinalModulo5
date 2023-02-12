@@ -2,34 +2,31 @@ const {DataTypes} = require('sequelize')
 
 const db = require('../db/conn')
 
+const Usuarios = require('./Usuarios')
+
 const Pdds = db.define('pedidos',{
-    id_Pedidos:{
-        type:DataTypes.INTEGER,
-        unique:true,
-        autoIncrement:true,
-        primaryKey:true
-    },
-    NPedd:{
+    npedd:{
         type:DataTypes.INTEGER,
         allowNull:false,
     },
-    PriceU:{
-        type:DataTypes.FLOAT(5,2),
-        allowNull:false
-    },
-    NomeP:{
+    nomep:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    QtdP:{
+    priceu:{
+        type:DataTypes.FLOAT(5,2),
+        allowNull:false
+    },
+    qtdp:{
         type:DataTypes.INTEGER,
         allowNull:false
     },
-    Vtt_compra:{
+    vtt_compra:{
         type:DataTypes.INTEGER,
         allowNull:false
     }
 })
-
+Pdds.belongsTo(Usuarios)
+Usuarios.hasMany(Pdds)
 
 module.exports = Pdds

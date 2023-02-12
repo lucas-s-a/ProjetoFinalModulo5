@@ -1,0 +1,27 @@
+<div>
+    <h2>Cadastro</h2>
+    <form action="/cadastro" method="POST">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" placeholder="Digite o seu nome" required>
+        </div>
+        <div>
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" placeholder="Digite o seu nome" required>
+        </div>
+        <div>
+            <label for="login">E-mail:</label>
+            <input type="text" name="login" placeholder="Digite o seu e-mail" required>
+        </div>
+            <div>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" placeholder="Digite a sua senha" required>
+        </div>
+        <div>
+            <label for="csenha">Confirmação de senha:</label>
+            <input type="password" name="csenha" placeholder="Confirme a sua senha" required>
+        </div>
+        <input type="submit" value="Cadastrar">
+        <p>Conta Cadastrada? <a href="/login">Logar</a></p>
+    </form>
+</div>

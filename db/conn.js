@@ -1,8 +1,15 @@
 const { Sequelize } = require('sequelize')
 
-const sequilize = new Sequelize('dbtestelv','root','',{
-    host:'localhost',
-    dialect:'mysql'
+const sequelize = new Sequelize('db_ljbrax', 'root', '', {
+    host: 'localhost',
+    dialect: 'mysql',
 })
 
-module.exports = sequilize
+try {
+    sequelize.authenticate()
+    console.log('logado com sucesso')
+}catch(err){
+   console.log(`falha na conexão: ${err}`)
+}
+
+module.exports = sequelize;
