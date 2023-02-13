@@ -1,46 +1,36 @@
-# ProjetoFinalModulo5
-Projeto em equipe demostrando conhecimentos em sql e javascript
+# Projeto Node.js CRUD
 
-# Site de compras de eletrônicos
+Projeto Final Módulo 5 Resilia - SENAC RJ (Programadores Cariocas)
 
-No projeto consiste em um site que consegue criar e armazenar usuários no bando de dados.
-Esse usuário poderá comprar
-produtos que estão em um banco de dados que será importado para uso da aplicação. 
-no site o cliente verá o preço final e poderá ver o histórico de seus pedidos , o banco gerencia e separa o pedido
-para o usuário que está acessando sem misturar.
+## Site de compras de eletrônicos
 
-o Usuário ao entrar no site deve fazer o cadastro para poder comprar assim que fazer e se a senha for aceita e não existir outro usuário como o mesmo nickname o cadastro será aceito e ao estar logado poderá fazer o pedido, 
-visualizar antes de finalizar a compra e concluir a compra salvando no banco de dados.
+O projeto consiste em um site que permite criar e armazenar usuários em um banco de dados. Esses usuários podem fazer pedidos de produtos que estão em um banco de dados importado para a aplicação. No site, o cliente pode ver o preço final e visualizar o histórico de seus pedidos. O banco gerencia e separa o pedido para o usuário que está acessando sem misturar.
 
-No trabalho foi ultilizado a arquitetura MVC para melhor visualização e organização do código ,também conta com a pasta de rotas
-e do banco separado ,além de uma pasta para session quando o usuário estiver logado
+O usuário deve fazer o cadastro para poder comprar, e ao estar logado, pode fazer o pedido, visualizar antes de finalizar a compra e concluir a compra salvando no banco de dados.
 
+No trabalho foi utilizado a arquitetura MVC para melhor visualização e organização do código, também conta com a pasta de rotas e do banco separado, além de uma pasta para session quando o usuário estiver logado.
 
-Entre as tecnologias usadas para criação do projeto além do Nodejs estão:
+Entre as tecnologias usadas para criação do projeto, além do Node.js, estão:
 
- 1. MySQL 
- 2. Express
- 3. Sequelize
- 4. Handlebars
- 5. Express Session
- 6. Express Flash
+1. MySQL 
+2. Express
+3. Sequelize
+4. Handlebars
+5. Express Session
+6. Express Flash
 
+## Como abrir
 
-Como abrir:
+Para executar a aplicação, você deve primeiro clonar o repositório ou baixar e extrair em seu computador. Quando extraído, você terá um arquivo SQL que terá uma micro API que servirá para a utilização do projeto. Esse arquivo fica em uma pasta ao qual ele será importado para o MySQL. Pode deixar na própria pasta da aplicação desde que indique o diretório ao fazer a importação para o MySQL pelo XAMPP.
 
-Para Executar a aplicação você deve primeiro dar git clone com o link do projeto ou baixar e extrair em seu computador.
-quando extraído ,você terá um arquivo sql que terá uma micro API que servirá para ultilização do projeto
-esse arquivo fica em uma pasta ao qual ele será importado para o mysql
-pode deixar na própria pasta da aplicação desde que indique o diretório ao fazer a importação para o mysql pelo xampp.
+Após colocar o arquivo em uma pasta de sua preferência ou na própria pasta, abra o aplicativo XAMPP que fará a conexão do banco a aplicação. Ao abrir o XAMPP:
 
-após colocar o arquivo em uma pasta de sua prefêrencia ou na própria pasta
-abra o aplicativo xampp que fará a conexão do banco a aplicação.
-ao abrir o xampp:
-Start o xampp
-abra o shell e dê o comando cd (caminho da pasta do arquivo sql)
-inicie o mysql com o comando > mysql -u root
-ao aparecer o Mariadb dê o comando > SOURCE apiprodt.sql (pois é o nome do arquivo sql da aplicação)
-após isso abrir a aplicação no VSCODE 
-abrir o terminal e dar o comando npm install no diretório da aplicação
-após instalar as depêndecias dar o comando npm start .
-ele criára as tabelas que faltarem caso não tenha e abrirá a aplicação
+- Inicie o XAMPP
+- Abra o shell e dê o comando cd (caminho da pasta do arquivo SQL)
+- Inicie o MySQL com o comando `mysql -u root`
+- Ao aparecer o Mariadb dê o comando `SOURCE apiprodt.sql` (pois é o nome do arquivo SQL da aplicação)
+
+Após isso, abra a aplicação no Visual Studio Code, abra o terminal e dê o comando `npm install` no diretório da aplicação. Após instalar as dependências, dê o comando `npm start`. Ele criará as tabelas que faltarem caso não tenha e abrirá a aplicação.
+
+## Considerações Finais
+Este projeto foi desenvolvido pelos Programadores Cariocas como trabalho final do módulo 5 do curso da Resilia - SENAC RJ. Seu objetivo foi demonstrar a capacidade dos alunos em desenvolver um site de compras com banco de dados e cadastro de usuários.
