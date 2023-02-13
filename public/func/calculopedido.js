@@ -128,8 +128,14 @@ function Verpedido(){
     const imprimir = {lc: listadecompras}
     console.log(listadecompras.length)
     console.log(imprimir.lc[0].Produto)
-    let html = imprimir.lc.map( lar =>{
-        return `<ul><li>${lar.Produto}</li><li>${lar.PriceU}</li><li>${lar.Quantidade}</li></ul>`
+    let vp = imprimir.lc.map( lar =>{
+        return `<td>${lar.Produto}<br></td>`
+    })
+    let vq = imprimir.lc.map( lar =>{
+        return `<td>${lar.Quantidade}</td><br>`
+    })
+    let vpc = imprimir.lc.map( lar =>{
+        return `<td>${lar.PriceU}</td><br>`
     })
     if(imprimir.lc.length == 1){
         let html2 = `<div><input name="prodcompra" type="hidden" value="${imprimir.lc[0].Produto}"><input name="priceunit" type="hidden" value="${imprimir.lc[0].PriceU}"><input name="qtdcompra" type="hidden" value="${imprimir.lc[0].Quantidade}"></div>`
@@ -141,9 +147,11 @@ function Verpedido(){
         })
         document.querySelector("#mandardadoscompra").innerHTML = `<div>${html2}</div>`
     }
-    document.querySelector("#npededio").innerHTML = `<div><input name="npedd" type="hidden" value="${numberped}"</div>`
-    document.querySelector("#vercompra").innerHTML = html.join("")
-    document.querySelector("#valortotal").innerHTML = `<div><input name="totalcompra" type="hidden" value="${total.toFixed(2)}"><br><p>${total}</p></div>`
+    document.querySelector("#npededio").innerHTML = `<div><input name="npedd" type="hidden" value="${numberped}"><br><p>Número do seu Pedido é: ${numberped}</p></div>`
+    document.querySelector("#verprod").innerHTML = vp.join("")
+    document.querySelector("#verquant").innerHTML = vq.join("")
+    document.querySelector("#verpreco").innerHTML = vpc.join("")
+    document.querySelector("#valortotal").innerHTML = `<div><input name="totalcompra" type="hidden" value="${total}"><br><p>Valor Total da sua compra é: ${total.toFixed(2)}</p></div>`
 }
 function postarhistorico(){
     console.log(ddpdds[0])

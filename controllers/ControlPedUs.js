@@ -51,8 +51,6 @@ module.exports = class ControlPedUS {
         let n3 = req.body.qtdcompra
         let n4 = req.body.totalcompra
         let n7 = req.body.npedd
-        console.log(typeof (n1), typeof (n2), typeof (n3), typeof (n4), n7)
-        console.log(n1, n2,n3, n4, n7)
         if (typeof (n1) == 'object') {
             for (let x = 0; x < n1.length; x++) {
                 let nomep = n1[x]

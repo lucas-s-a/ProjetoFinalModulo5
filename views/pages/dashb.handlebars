@@ -11,7 +11,7 @@
             <a href="/pages/atualizarcad/{{usatual.id}}" class="btn btn-primary">Editar</a>
             <a href="/pages/apagarcount/{{usatual.id}}" class="btn btn-danger">Apagar Sua Conta</a>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <h1>Compre Agora</h1>
             <div class="row">
                 <div class="col-md-6">
@@ -20,7 +20,8 @@
                             {{#each produtos}}
                             <h5 class="card-title">{{this.nomep}}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">{{this.priceu}}</h6>
-                            <input type="number" id="qtdprod" name="qtd" min="0" value="0" pattern="^[0-9]+" class="form-control mb-2">
+                            <input type="number" id="qtdprod" name="qtd" min="0" value="0" pattern="^[0-9]+"
+                                class="form-control mb-2">
                             {{/each}}
                             <button type="button" id="PrepararPedido" class="btn btn-success">Fazer Pedido</button>
                             <div>
@@ -35,10 +36,23 @@
                     <form action="/pages/dashb" method="POST">
                         <input type="hidden" name="id" value="{{usatual.id}}">
                         <h1>Pedido Atual</h1>
-                        <div id="vercompra" class="card mb-2"></div>
+                        <div id="npededio" class="card mb-2"></div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Produto</th>
+                                    <th scope="col">Quantidade</th>
+                                    <th scope="col">Preço Único</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <th id="verprod" scope="row"></th>
+                                <th id="verquant" scope="row"></th>
+                                <th id="verpreco" scope="row"></th>
+                            </tbody>
+                        </table>
                         <div id="mandardadoscompra" class="card mb-2"></div>
                         <div id="valortotal" class="card mb-2"></div>
-                        <div id="npededio" class="card mb-2"></div>
                         <button type="submit" class="btn btn-primary">Confirmar Compra</button>
                     </form>
                 </div>
@@ -47,22 +61,18 @@
     </div>
 </div>
 
-    <div>
-        <h1>Pedidos Concluídos</h1>
+<div>
+    <h1>Pedidos Concluídos</h1>
+</div>
+<div class="caixa3">
+    <div id="ddpedidos">
+        {{#each ped}}
+        <p>{{this.npedd}}| {{this.nomep}} | {{this.vtt_compra}} |{{this.qtdp}}</p>
+        {{/each}}
     </div>
-    <div class="caixa3">
-        <div id="ddpedidos">
-            {{#each ped}}
-            <h5>{{this.npedd}}</h5>
-            <h6>{{this.nomep}}</h6>
-            <h4>{{this.vtt_compra}}</h4>
-            <h3>{{this.qtdp}}</h3>
-            {{/each}}
-            <input type="button" id="history" value="Exibir Histórico de compras">
-        </div>
-        {{#if exibirpedidos}}
-        <p>Ainda não há nenhum pensamento cadastrado</p>
-        {{/if}}
-    </div>
+    {{#if exibirpedidos}}
+    <p>Ainda não há nenhum pensamento cadastrado</p>
+    {{/if}}
+</div>
 </div>
 <script src="../func/calculopedido.js" defer></script>
