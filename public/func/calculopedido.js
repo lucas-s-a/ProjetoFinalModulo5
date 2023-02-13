@@ -116,6 +116,6 @@ function Verpedido(){
     document.querySelector("#verprod").innerHTML = vp.join("")
     document.querySelector("#verquant").innerHTML = vq.join("")
     document.querySelector("#verpreco").innerHTML = vpc.join("")
-    document.querySelector("#valortotal").innerHTML = `<div><input name="totalcompra" type="hidden" value="${total}"><br><p>Valor Total da sua compra é: ${total.toFixed(2)}</p></div>`
+    document.querySelector("#valortotal").innerHTML = `<div><input name="totalcompra" type="hidden" value="${total}"><br><p>Valor Total da sua compra é: R$ ${total.toFixed(2)}</p></div>`
 }
 prepped.addEventListener('click',Verpedido)

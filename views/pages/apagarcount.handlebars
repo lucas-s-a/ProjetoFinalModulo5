@@ -6,7 +6,7 @@
         <div class="text-center mb-3" id="sadface">
           <img src="/img/kaka.png" alt="Pessoa triste se despedindo">
         </div>
-        <h1 class="text-center mb-3">Senhor {{usdados.nome}}</h1>
+        <h1 class="text-center mb-3">Senhor {{usdados.nome}} {{usdados.sobrenome}}</h1>
         <p class="text-center mb-3">Você está prestes a perder todas as vantagens que temos a oferecer</p>
         <form action="/pages/apagarcount/{{this.id}}" method="POST" class="text-center mb-3">
           <input type="hidden" name="id" value="{{this.id}}">

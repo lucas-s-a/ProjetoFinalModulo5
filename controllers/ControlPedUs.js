@@ -148,9 +148,8 @@ module.exports = class ControlPedUS {
 
             req.flash('message', 'Conta Excluída!')
 
-            req.session.save(() => {
-                res.redirect('/pages/home')
-            })
+            req.session.destroy()
+            res.redirect('/login')
         } catch (error) {
             console.log(error)
         }
