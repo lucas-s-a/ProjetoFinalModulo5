@@ -8,12 +8,12 @@ function Verpedido(){
     listadecompras = []
     pedidosnumero = []
     console.log(dd)
-    console.log(dd[0].childNodes[1].childNodes[57].childNodes)
-    console.log((dd[0].childNodes[1].childNodes[57].childNodes).length)
-    const dpv = (dd[0].childNodes[1].childNodes[57].childNodes).length
+    console.log(dd[0].childNodes[1].childNodes[75].childNodes)
+    console.log((dd[0].childNodes[1].childNodes[77].childNodes).length)
+    const dpv = (dd[0].childNodes[1].childNodes[77].childNodes).length
     let x=1
     while(x<dpv){
-        pedidosnumero.push(parseInt(dd[0].childNodes[1].childNodes[57].childNodes[x].value))
+        pedidosnumero.push(parseInt(dd[0].childNodes[1].childNodes[77].childNodes[x].value))
         x = x+2
     }
     console.log(pedidosnumero)
@@ -28,14 +28,14 @@ function Verpedido(){
     //console.log(dd[0].children[t2].childNodes[1].value)
     //Nome dos produtos
     let p1 = dd[0].childNodes[1].children[0].innerText
-    let p2 = dd[0].childNodes[1].children[3].innerText
-    let p3 = dd[0].childNodes[1].children[6].innerText
-    let p4 = dd[0].childNodes[1].children[9].innerText
-    let p5 = dd[0].childNodes[1].children[12].innerText
-    let p6 = dd[0].childNodes[1].children[15].innerText
-    let p7 = dd[0].childNodes[1].children[18].innerText
-    let p8 = dd[0].childNodes[1].children[21].innerText
-    let p9 = dd[0].childNodes[1].children[24].innerText
+    let p2 = dd[0].childNodes[1].children[4].innerText
+    let p3 = dd[0].childNodes[1].children[8].innerText
+    let p4 = dd[0].childNodes[1].children[12].innerText
+    let p5 = dd[0].childNodes[1].children[16].innerText
+    let p6 = dd[0].childNodes[1].children[20].innerText
+    let p7 = dd[0].childNodes[1].children[24].innerText
+    let p8 = dd[0].childNodes[1].children[28].innerText
+    let p9 = dd[0].childNodes[1].children[32].innerText
     console.log(p1)
     console.log(p2)
     console.log(p3)
@@ -48,14 +48,14 @@ function Verpedido(){
 
     //Preço
     let prc1 = parseFloat(dd[0].childNodes[1].children[1].innerText)
-    let prc2 = parseFloat(dd[0].childNodes[1].children[4].innerText)
-    let prc3 = parseFloat(dd[0].childNodes[1].children[7].innerText)
-    let prc4 = parseFloat(dd[0].childNodes[1].children[10].innerText)
-    let prc5 = parseFloat(dd[0].childNodes[1].children[13].innerText)
-    let prc6 = parseFloat(dd[0].childNodes[1].children[16].innerText)
-    let prc7 = parseFloat(dd[0].childNodes[1].children[19].innerText)
-    let prc8 = parseFloat(dd[0].childNodes[1].children[22].innerText)
-    let prc9 = parseFloat(dd[0].childNodes[1].children[25].innerText)
+    let prc2 = parseFloat(dd[0].childNodes[1].children[5].innerText)
+    let prc3 = parseFloat(dd[0].childNodes[1].children[9].innerText)
+    let prc4 = parseFloat(dd[0].childNodes[1].children[13].innerText)
+    let prc5 = parseFloat(dd[0].childNodes[1].children[17].innerText)
+    let prc6 = parseFloat(dd[0].childNodes[1].children[21].innerText)
+    let prc7 = parseFloat(dd[0].childNodes[1].children[25].innerText)
+    let prc8 = parseFloat(dd[0].childNodes[1].children[29].innerText)
+    let prc9 = parseFloat(dd[0].childNodes[1].children[33].innerText)
     console.log(prc1)
     console.log(prc2)
     console.log(prc3)
@@ -68,14 +68,14 @@ function Verpedido(){
 
     //Quantidade
     let qtd1 = parseInt(dd[0].childNodes[1].children[2].value)
-    let qtd2 = parseInt(dd[0].childNodes[1].children[5].value)
-    let qtd3 = parseInt(dd[0].childNodes[1].children[8].value)
-    let qtd4 = parseInt(dd[0].childNodes[1].children[11].value)
-    let qtd5 = parseInt(dd[0].childNodes[1].children[14].value)
-    let qtd6 = parseInt(dd[0].childNodes[1].children[17].value)
-    let qtd7 = parseInt(dd[0].childNodes[1].children[20].value)
-    let qtd8 = parseInt(dd[0].childNodes[1].children[23].value)
-    let qtd9 = parseInt(dd[0].childNodes[1].children[26].value)
+    let qtd2 = parseInt(dd[0].childNodes[1].children[6].value)
+    let qtd3 = parseInt(dd[0].childNodes[1].children[10].value)
+    let qtd4 = parseInt(dd[0].childNodes[1].children[14].value)
+    let qtd5 = parseInt(dd[0].childNodes[1].children[18].value)
+    let qtd6 = parseInt(dd[0].childNodes[1].children[22].value)
+    let qtd7 = parseInt(dd[0].childNodes[1].children[26].value)
+    let qtd8 = parseInt(dd[0].childNodes[1].children[30].value)
+    let qtd9 = parseInt(dd[0].childNodes[1].children[34].value)
     console.log(qtd1)
     console.log(qtd2)
     console.log(qtd3)

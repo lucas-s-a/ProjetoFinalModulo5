@@ -20,9 +20,10 @@
                             {{#each produtos}}
                             <h5 class="card-title">{{this.nomep}}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">{{this.priceu}}</h6>
-                            <input type="number" id="qtdprod" name="qtd" min="0" value="0" pattern="^[0-9]+"
-                                class="form-control mb-2">
+                            <input type="number" id="qtdprod" name="qtd" min="0" value="0" pattern="^[0-9]+" class="form-control mb-2">
+                            <img src="/img/{{this.img}}" alt="imgprod" width="100px" class="rounded mx-auto d-block">
                             {{/each}}
+                            <br>
                             <button type="button" id="PrepararPedido" class="btn btn-success">Fazer Pedido</button>
                             <div>
                                 {{#each ped}}

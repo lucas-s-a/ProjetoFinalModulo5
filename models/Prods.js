@@ -10,6 +10,10 @@ const Prods = db.define('prodstbs', {
     priceu:{
         type: DataTypes.FLOAT(6,2),
         allowNull: false
+    },
+    img:{
+        type: DataTypes.STRING,
+        allowNull: false
     }
 })
 
