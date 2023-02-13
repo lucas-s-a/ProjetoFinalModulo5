@@ -6,6 +6,7 @@ const ControlPedUS = require('../controllers/ControlPedUs')
 const Entry = require('../verifieldlog/estalogasn').versetalogado
 
 router.get('/',ControlPedUS.Home)
+router.get('/sobrenos',ControlPedUS.sobre)
 router.get('/dashb', Entry, ControlPedUS.dashb)
 router.post('/dashb', Entry, ControlPedUS.dashcompra)
 router.get('/atualizarcad/:id', Entry, ControlPedUS.ActualllyDados)

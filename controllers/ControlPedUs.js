@@ -9,7 +9,9 @@ module.exports = class ControlPedUS {
     static Home(req, res) {
         res.render('pages/home')
     }
-
+    static sobre(req, res) {
+        res.render('pages/sobrenos')
+    }
     static async dashb(req, res) {
         const clienteid = req.session.clientesid;
 

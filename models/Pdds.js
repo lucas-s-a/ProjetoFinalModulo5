@@ -22,7 +22,7 @@ const Pdds = db.define('pedidos',{
         allowNull:false
     },
     vtt_compra:{
-        type:DataTypes.FLOAT(6,2),
+        type:DataTypes.FLOAT(10,2),
         allowNull:false
     }
 })

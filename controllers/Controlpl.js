@@ -7,7 +7,7 @@ module.exports = class Contrologs {
     static logar(req, res) {
         res.render('auth/login')
     }
-
+    
     static async tentarlogar(req, res) {
         const { login, senha } = req.body
 
