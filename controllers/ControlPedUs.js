@@ -146,7 +146,7 @@ module.exports = class ControlPedUS {
         try {
             await Usuarios.destroy({ where: { id: idu, id: UserId } })
 
-            req.flash('message', 'pensamento removido com sucesso!')
+            req.flash('message', 'Conta Excluída!')
 
             req.session.save(() => {
                 res.redirect('/pages/home')

@@ -57,7 +57,7 @@ module.exports = class Contrologs {
 
 
         if (usuarioexiste) {
-            req.flash('message', 'Um usuário já possui esse login!')
+            req.flash('message', 'Algum usuário já possui esse login!')
             res.render('auth/cadastro')
 
             return
@@ -73,8 +73,6 @@ module.exports = class Contrologs {
             req.flash('message', 'Cadastro Realizado com sucesso!')
 
             req.session.clientesid = criarusu.id
-
-            req.flash('message', 'Cadastro Realizado com sucesso!')
 
             req.session.save(() => {
                 res.redirect('/')
