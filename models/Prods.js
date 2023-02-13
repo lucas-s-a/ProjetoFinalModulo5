@@ -8,7 +8,7 @@ const Prods = db.define('prodstbs', {
         allowNull: false
     },
     priceu:{
-        type: DataTypes.FLOAT(5,2),
+        type: DataTypes.FLOAT(6,2),
         allowNull: false
     }
 })

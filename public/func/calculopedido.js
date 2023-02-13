@@ -7,12 +7,13 @@ const ddpdds = document.querySelectorAll("#ddpedidos")
 function Verpedido(){
     listadecompras = []
     pedidosnumero = []
-    console.log(dd[0].children[28].childNodes)
-    console.log((dd[0].children[28].childNodes).length)
-    const dpv = (dd[0].children[28].childNodes).length
+    console.log(dd)
+    console.log(dd[0].childNodes[1].childNodes[57].childNodes)
+    console.log((dd[0].childNodes[1].childNodes[57].childNodes).length)
+    const dpv = (dd[0].childNodes[1].childNodes[57].childNodes).length
     let x=1
     while(x<dpv){
-        pedidosnumero.push(parseInt(dd[0].children[28].childNodes[x].value))
+        pedidosnumero.push(parseInt(dd[0].childNodes[1].childNodes[57].childNodes[x].value))
         x = x+2
     }
     console.log(pedidosnumero)
@@ -26,16 +27,16 @@ function Verpedido(){
     const numberped = npedd
     //console.log(dd[0].children[t2].childNodes[1].value)
     //Nome dos produtos
-    let p1 = dd[0].childNodes[1].innerText
-    let p2 = dd[0].childNodes[7].innerText
-    let p3 = dd[0].childNodes[13].innerText
-    let p4 = dd[0].childNodes[19].innerText
-    let p5 = dd[0].childNodes[25].innerText
-    let p6 = dd[0].childNodes[31].innerText
-    let p7 = dd[0].childNodes[37].innerText
-    let p8 = dd[0].childNodes[43].innerText
-    let p9 = dd[0].childNodes[49].innerText
-    /*console.log(p1)
+    let p1 = dd[0].childNodes[1].children[0].innerText
+    let p2 = dd[0].childNodes[1].children[3].innerText
+    let p3 = dd[0].childNodes[1].children[6].innerText
+    let p4 = dd[0].childNodes[1].children[9].innerText
+    let p5 = dd[0].childNodes[1].children[12].innerText
+    let p6 = dd[0].childNodes[1].children[15].innerText
+    let p7 = dd[0].childNodes[1].children[18].innerText
+    let p8 = dd[0].childNodes[1].children[21].innerText
+    let p9 = dd[0].childNodes[1].children[24].innerText
+    console.log(p1)
     console.log(p2)
     console.log(p3)
     console.log(p4)
@@ -44,18 +45,17 @@ function Verpedido(){
     console.log(p7)
     console.log(p8)
     console.log(p9)
-*/
 
     //Preço
-    let prc1 = parseFloat(dd[0].childNodes[3].innerText)
-    let prc2 = parseFloat(dd[0].childNodes[9].innerText)
-    let prc3 = parseFloat(dd[0].childNodes[15].innerText)
-    let prc4 = parseFloat(dd[0].childNodes[21].innerText)
-    let prc5 = parseFloat(dd[0].childNodes[27].innerText)
-    let prc6 = parseFloat(dd[0].childNodes[33].innerText)
-    let prc7 = parseFloat(dd[0].childNodes[39].innerText)
-    let prc8 = parseFloat(dd[0].childNodes[45].innerText)
-    let prc9 = parseFloat(dd[0].childNodes[51].innerText)
+    let prc1 = parseFloat(dd[0].childNodes[1].children[1].innerText)
+    let prc2 = parseFloat(dd[0].childNodes[1].children[4].innerText)
+    let prc3 = parseFloat(dd[0].childNodes[1].children[7].innerText)
+    let prc4 = parseFloat(dd[0].childNodes[1].children[10].innerText)
+    let prc5 = parseFloat(dd[0].childNodes[1].children[13].innerText)
+    let prc6 = parseFloat(dd[0].childNodes[1].children[16].innerText)
+    let prc7 = parseFloat(dd[0].childNodes[1].children[19].innerText)
+    let prc8 = parseFloat(dd[0].childNodes[1].children[22].innerText)
+    let prc9 = parseFloat(dd[0].childNodes[1].children[25].innerText)
     console.log(prc1)
     console.log(prc2)
     console.log(prc3)
@@ -67,15 +67,15 @@ function Verpedido(){
     console.log(prc9)
 
     //Quantidade
-    let qtd1 = parseInt(dd[0].childNodes[5].value)
-    let qtd2 = parseInt(dd[0].childNodes[11].value)
-    let qtd3 = parseInt(dd[0].childNodes[17].value)
-    let qtd4 = parseInt(dd[0].childNodes[23].value)
-    let qtd5 = parseInt(dd[0].childNodes[29].value)
-    let qtd6 = parseInt(dd[0].childNodes[35].value)
-    let qtd7 = parseInt(dd[0].childNodes[41].value)
-    let qtd8 = parseInt(dd[0].childNodes[47].value)
-    let qtd9 = parseInt(dd[0].childNodes[53].value)
+    let qtd1 = parseInt(dd[0].childNodes[1].children[2].value)
+    let qtd2 = parseInt(dd[0].childNodes[1].children[5].value)
+    let qtd3 = parseInt(dd[0].childNodes[1].children[8].value)
+    let qtd4 = parseInt(dd[0].childNodes[1].children[11].value)
+    let qtd5 = parseInt(dd[0].childNodes[1].children[14].value)
+    let qtd6 = parseInt(dd[0].childNodes[1].children[17].value)
+    let qtd7 = parseInt(dd[0].childNodes[1].children[20].value)
+    let qtd8 = parseInt(dd[0].childNodes[1].children[23].value)
+    let qtd9 = parseInt(dd[0].childNodes[1].children[26].value)
     console.log(qtd1)
     console.log(qtd2)
     console.log(qtd3)
@@ -86,7 +86,7 @@ function Verpedido(){
     console.log(qtd8)
     console.log(qtd9)
     const total = qtd1*prc1+qtd2*prc2+qtd3*prc3+qtd4*prc4+qtd5*prc5+qtd6*prc6+qtd7*prc7+qtd8*prc8+qtd9*prc9
-    console.log(total)
+    console.log(total.toFixed(2))
 
     if(qtd1 != 0){
         const l1 = {Produto:`${p1}`,PriceU:`${prc1}`,Quantidade:`${qtd1}`}
@@ -126,33 +126,27 @@ function Verpedido(){
     }
     console.log(listadecompras)
     const imprimir = {lc: listadecompras}
+    console.log(listadecompras.length)
+    console.log(imprimir.lc[0].Produto)
     let html = imprimir.lc.map( lar =>{
         return `<ul><li>${lar.Produto}</li><li>${lar.PriceU}</li><li>${lar.Quantidade}</li></ul>`
     })
-    let html2 = imprimir.lc.map( lar =>{
-        return `<div><input name="prodcompra" type="hidden" value="${lar.Produto}"><input name="priceunit" type="hidden" value="${lar.PriceU}"><input name="qtdcompra" type="hidden" value="${lar.Quantidade}"></div>`
-    })
+    if(imprimir.lc.length == 1){
+        let html2 = `<div><input name="prodcompra" type="hidden" value="${imprimir.lc[0].Produto}"><input name="priceunit" type="hidden" value="${imprimir.lc[0].PriceU}"><input name="qtdcompra" type="hidden" value="${imprimir.lc[0].Quantidade}"></div>`
+        document.querySelector("#mandardadoscompra").innerHTML = `<div>${html2}</div>`
+        
+    }else if(imprimir.lc.length > 1){
+        let html2 = imprimir.lc.map( lart =>{
+            return `<div><input name="prodcompra" type="hidden" value="${lart.Produto}"><input name="priceunit" type="hidden" value="${lart.PriceU}"><input name="qtdcompra" type="hidden" value="${lart.Quantidade}"></div>`
+        })
+        document.querySelector("#mandardadoscompra").innerHTML = `<div>${html2}</div>`
+    }
     document.querySelector("#npededio").innerHTML = `<div><input name="npedd" type="hidden" value="${numberped}"</div>`
     document.querySelector("#vercompra").innerHTML = html.join("")
-    document.querySelector("#mandardadoscompra").innerHTML = `<div>${html2}</div>`
-    document.querySelector("#valortotal").innerHTML = `<div><input name="totalcompra" type="hidden" value="${total}"><br><p>${total}</p></div>`
+    document.querySelector("#valortotal").innerHTML = `<div><input name="totalcompra" type="hidden" value="${total.toFixed(2)}"><br><p>${total}</p></div>`
 }
 function postarhistorico(){
-    console.log(ddpdds)
-    console.log(ddpdds[0].children.length)
-    console.log(ddpdds[0].children[10].value)
-    const preparacard = []
-    let x = 0
-    while(x < ddpdds[0].children.length){
-        let z = ddpdds[0].children[x].innerText
-        if(z == ""){
-            break
-        }
-        let p = z.split("/")
-        preparacard.push(p)
-        x= x+1
-    }
-    console.log(preparacard)
+    console.log(ddpdds[0])
 }
 prephist.addEventListener('click',postarhistorico)
 prepped.addEventListener('click',Verpedido)

@@ -1,16 +1,20 @@
-<div class="tought-form-container">
-    <a href="/pages/dashb">Voltar</a>
-    <h1>Altere algum dados</h1>
-    <form action="/pages/atualizarcad" method="POST">
-        <input type="hidden" name="id" value={{usdados.id}}>
-        <div>
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" placeholder="Digite o seu nome" value="{{usdados.nome}}">
+<div class="container mt-4">
+        <div class="card shadow">
+            <div class="card-body">
+                <h1 class="card-title">Edite sua conta</h1>
+                <form action="/pages/atualizarcad" method="POST">
+                    <input type="hidden" name="id" value="{{usdados.id}}">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" name="nome" placeholder="Digite o seu nome" value="{{usdados.nome}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sobrenome" class="form-label">Sobrenome:</label>
+                        <input type="text" class="form-control" name="sobrenome" placeholder="Digite o seu nome" value="{{usdados.sobrenome}}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </form>
+            </div>
+                <a href="/pages/apagarcount/{{usdados.id}}" class="btn btn-danger">Apagar Sua Conta</a>
         </div>
-        <div>
-            <label for="sobrenome">Sobrenome:</label>
-            <input type="text" name="sobrenome" placeholder="Digite o seu nome" value="{{usdados.sobrenome}}">
-        </div>
-        <input type="submit" value="Editar Pensamento">
-    </form>
-</div>
+    </div>

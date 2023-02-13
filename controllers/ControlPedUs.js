@@ -24,8 +24,8 @@ module.exports = class ControlPedUS {
         }
 
         const ped = await Pdds.findAll({
-            where:{
-                clienteid:clienteid
+            where: {
+                clienteid: clienteid
             },
             raw: true
         })
@@ -44,25 +44,37 @@ module.exports = class ControlPedUS {
         res.render('pages/dashb', { usatual: usatual, produtos, ped, exibirpedidos })
     }
 
-    static async dashcompra (req, res) {
+    static async dashcompra(req, res) {
         const clienteId = req.body.id
         let n1 = req.body.prodcompra
         let n2 = req.body.priceunit
         let n3 = req.body.qtdcompra
         let n4 = req.body.totalcompra
         let n7 = req.body.npedd
-        let arreyteste = []
-        for (let x = 0; x < n1.length; x++){
-            let nomep = n1[x]
-            let priceu = n2[x]
-            let qtdp = n3[x]
+        console.log(typeof (n1), typeof (n2), typeof (n3), typeof (n4), n7)
+        console.log(n1, n2,n3, n4, n7)
+        if (typeof (n1) == 'object') {
+            for (let x = 0; x < n1.length; x++) {
+                let nomep = n1[x]
+                let priceu = n2[x]
+                let qtdp = n3[x]
+                let vtt_compra = n4
+                let npedd = n7
+                await Pdds.create({ npedd, nomep, priceu, qtdp, vtt_compra, clienteId })
+            }
+            res.redirect('/pages/dashb')
+        } else if (typeof (n1) == 'string') {
+            let nomep = n1
+            let priceu = n2
+            let qtdp = n3
             let vtt_compra = n4
             let npedd = n7
-            await arreyteste.push([npedd, nomep, priceu, qtdp,vtt_compra,clienteId])
-            Pdds.create({npedd,nomep,priceu,qtdp,vtt_compra,clienteId})
+            await Pdds.create({ npedd, nomep, priceu, qtdp, vtt_compra, clienteId })
+            res.redirect('/pages/dashb')
+        }else if (typeof (n1) == 'undefined'){
+            console.log('para porfavor')
+            res.redirect('/pages/dashb')
         }
-        console.log(arreyteste)
-        res.redirect('/pages/dashb')
     }
 
     static async ActualllyDados(req, res) {
