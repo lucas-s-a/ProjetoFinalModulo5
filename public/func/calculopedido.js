@@ -153,8 +153,4 @@ function Verpedido(){
     document.querySelector("#verpreco").innerHTML = vpc.join("")
     document.querySelector("#valortotal").innerHTML = `<div><input name="totalcompra" type="hidden" value="${total}"><br><p>Valor Total da sua compra é: ${total.toFixed(2)}</p></div>`
 }
-function postarhistorico(){
-    console.log(ddpdds[0])
-}
-prephist.addEventListener('click',postarhistorico)
 prepped.addEventListener('click',Verpedido)

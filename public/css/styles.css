@@ -99,3 +99,36 @@
     padding-right: 10px;
 }
   
+.alertas{
+  background:#67ccf4;
+  text-align: center;
+  border-radius: 5px;
+}
+/* Exibir Pedidos jà feitos*/
+.pedinfo1{
+  width: 7%;
+}
+.pedinfo2{
+  width: 20%;
+}
+.pedinfo3{
+  width: 7%;
+}
+.pedinfo4{
+  width: 10%;
+}
+.cestlist{
+  list-style: none;
+  background-image: linear-gradient(rgb(3, 70, 34), rgb(233, 233, 213));
+}
+.cestlistd{
+  list-style: none;
+  background-image: linear-gradient(rgb(0, 255, 38), rgb(233, 233, 213));
+}
+.titulosname{
+  text-align: center;
+  background-image: linear-gradient(rgb(14, 148, 76), rgb(233, 233, 213));
+  padding: 5px;
+  border-bottom: 2px solid rgb(53, 49, 49);
+  border-top: 5px solid rgb(26, 3, 3);
+}

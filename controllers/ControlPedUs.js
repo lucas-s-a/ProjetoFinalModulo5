@@ -58,20 +58,47 @@ module.exports = class ControlPedUS {
                 let qtdp = n3[x]
                 let vtt_compra = n4
                 let npedd = n7
-                await Pdds.create({ npedd, nomep, priceu, qtdp, vtt_compra, clienteId })
+                try{
+                    await Pdds.create({ npedd, nomep, priceu, qtdp, vtt_compra, clienteId })
+                }catch(error){
+                    console.log(error)
+                }
             }
-            res.redirect('/pages/dashb')
+            req.flash('message', 'Pedido criado com sucesso! Obrigado pela Preferência')
+
+            req.session.save(() => {
+                res.redirect('/pages/dashb')
+            })
+            
         } else if (typeof (n1) == 'string') {
             let nomep = n1
             let priceu = n2
             let qtdp = n3
             let vtt_compra = n4
             let npedd = n7
-            await Pdds.create({ npedd, nomep, priceu, qtdp, vtt_compra, clienteId })
-            res.redirect('/pages/dashb')
+            try{
+                await Pdds.create({ npedd, nomep, priceu, qtdp, vtt_compra, clienteId })
+                req.flash('message', 'Pedido criado com sucesso! Obrigado pela Preferência')
+                
+                req.session.save(() => {
+                res.redirect('/pages/dashb')
+            })
+                
+            }catch(error){
+                console.log(error)
+            }
         }else if (typeof (n1) == 'undefined'){
-            console.log('para porfavor')
-            res.redirect('/pages/dashb')
+            try {
+                req.flash('message', 'Erro ao concluir seu pedido Por favor tente novamente mais tarde!')
+
+    
+                req.session.save(() => {
+                    res.redirect('/pages/dashb')
+                })
+            } catch (error) {
+                console.log(error)
+            }
+            
         }
     }
 
