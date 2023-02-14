@@ -80,7 +80,7 @@ module.exports = class ControlPedUS {
             let npedd = n7
             try{
                 await Pdds.create({ npedd, nomep, priceu, qtdp, vtt_compra, clienteId })
-                req.flash('message', 'Pedido criado com sucesso! Obrigado pela Preferência')
+                req.flash('message1', 'Pedido criado com sucesso! Obrigado pela Preferência')
                 
                 req.session.save(() => {
                 res.redirect('/pages/dashb')
@@ -91,7 +91,7 @@ module.exports = class ControlPedUS {
             }
         }else if (typeof (n1) == 'undefined'){
             try {
-                req.flash('message', 'Erro ao concluir seu pedido Por favor tente novamente mais tarde!')
+                req.flash('message2', 'Erro ao concluir seu pedido Por favor tente novamente mais tarde!')
 
     
                 req.session.save(() => {
